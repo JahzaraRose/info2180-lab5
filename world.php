@@ -1,12 +1,13 @@
 <?php
-error_log(print_r($_GET, true));  // Log the parameters to check
-
+// Database connection setup
 $host = 'localhost';
 $username = 'lab5_user';
 $password = 'password123';
 $dbname = 'world';
 
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+
+// Get the country and lookup query parameter
 $country = isset($_GET['country']) ? $_GET['country'] : '';
 $lookup = isset($_GET['lookup']) ? $_GET['lookup'] : '';
 
@@ -95,4 +96,3 @@ if ($lookup == 'cities' && !empty($country)) {
     }
 }
 ?>
-

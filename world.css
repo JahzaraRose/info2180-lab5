@@ -7,8 +7,8 @@
 /* Body Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at center, #f06292 0%, #f48fb1 100%); /* Pink gradient background */
-    color: #000000;
+    background: linear-gradient(to bottom, #a0d0a5 0%, #3a8d8b 100%); /* Green to blue gradient */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ body {
 header {
     text-align: center;
     padding: 30px 20px;
-    background-color: #f8bbd0; /* Light pink background */
+    background-color: #63a69f; /* Soft teal background */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
@@ -28,7 +28,7 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    color: #f00080; 
+    color: #ffffff;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -36,33 +36,17 @@ header h1 {
 }
 
 header h1 img {
-    width: 100px;  /* Size of the image */
-    height: 100px; /* Equal to width to create a square */
-    border-radius: 50%; /* Makes the image circular */
-    vertical-align: middle;  /* Align the image vertically with the text */
-    margin-right: 10px;
+    width: 150px;         /* Size of the image */
+    height: 150px;        /* Keep it square for the circle */
+    border-radius: 50%;   /* Makes the image circular */
+    object-fit: cover;    /* Ensures the image fills the circle */
+    object-position: center;  /* Keep the image centered */
+    vertical-align: middle;
+    margin-right: 10px;   /* Space between the image and the text */
+    background: transparent; /* Ensure no background behind the image */
 }
 
-#image-section {
-    width: 100%;
-    background-image: url('pinkglobe.jpg.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 60px 20px;
-    text-align: center;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 25px;
-    margin-bottom: 70px;
-}
 
-#image-section h2 {
-    font-size: 2.2em;
-    font-weight: 500;
-    color: #f00080;
-    margin-bottom: 15px;
-}
 
 /* Container for the search area */
 .search-container {
@@ -86,18 +70,18 @@ header h1 img {
     font-size: 1rem;
     outline: none;
     box-sizing: border-box;
-    background-color: #ffe0e0;
+    background-color: #f1f1f1;
 }
 
 #country:focus {
-    border-color: #f00080;
+    border-color: #3a8d8b; /* Focus color */
 }
 
 #lookup, #lookup-cities {
     padding: 12px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #f00080;
+    background-color: #3a8d8b; /* Blue-green button */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -106,41 +90,40 @@ header h1 img {
 }
 
 #lookup:hover, #lookup-cities:hover {
-    background-color: #fec6f0;
+    background-color: #6ab4b2; /* Lighter shade for hover effect */
 }
 
 /* Results Section */
 #result {
     margin-top: 20px;
     padding: 20px;
-    background-color: #f8bbd0;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #333;
 }
 
-/* Center the table */
+/* Table Styles */
 table {
-    margin: 20px auto; /* Centers the table horizontally */
-    border-collapse: collapse; /* Collapses the borders of the table */
-    width: 80%; /* Adjust the table width */
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
 }
 
-/* Table header styles */
 th {
-    background-color: #f00080;
+    background-color: #3a8d8b;
     color: white;
     padding: 12px;
     text-align: center;
 }
 
-/* Table data styles */
 td {
     padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 600px) {
     .search-container {
         width: 90%;
@@ -153,6 +136,6 @@ td {
     }
 
     table {
-        width: 100%; /* Make table responsive on smaller screens */
+        width: 100%;
     }
 }
