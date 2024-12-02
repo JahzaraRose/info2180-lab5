@@ -1,4 +1,6 @@
 <?php
+error_log(print_r($_GET, true));  // Log the parameters to check
+
 $host = 'localhost';
 $username = 'lab5_user';
 $password = 'password123';

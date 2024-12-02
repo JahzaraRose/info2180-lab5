@@ -32,15 +32,7 @@ window.onload = function() {
     // Country lookup button event listener
     var lookupButton = document.getElementById("lookup");
     lookupButton.addEventListener("click", function() {
-        var countryInput = document.getElementById("country");
-        var countryName = countryInput.value.trim();
-        
-        // Only trigger the search if the country input is empty
-        if (countryName === "") {
-            searchList('country');  // Trigger country search when search bar is empty
-        } else {
-            searchList('country');  // Trigger country search otherwise
-        }
+         searchList('country');  // Trigger country search
     });
 
     // Cities lookup button event listener
@@ -62,14 +54,8 @@ window.onload = function() {
     countryInput.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault(); // Prevent form submission
-            var countryName = countryInput.value.trim();
-            
-            // If the country input is empty, perform a general country search
-            if (countryName === "") {
-                searchList('country');
-            } else {
-                searchList('country'); // Otherwise, perform the country search
-            }
+            searchList('country');  // Trigger country search
         }
+        
     });
 };
